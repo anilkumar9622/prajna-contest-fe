@@ -1,13 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-    swcMinify: true,
-    eslint: {
-        ignoreDuringBuilds: true,
-    },
-     images: {
-    domains: ["localhost","kooqxit.com"], // 👈 add your external image host here
+  reactStrictMode: true,
+  swcMinify: true,
+  experimental: {
+    appDir: true, // only if you’re actually using the App Router
   },
 };
 
 module.exports = nextConfig;
+
