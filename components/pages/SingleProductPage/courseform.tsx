@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export function CourseForm() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<any>({
    
     name: "",
     surname: "",
@@ -11,11 +11,11 @@ export function CourseForm() {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
   };
@@ -56,7 +56,7 @@ export function CourseForm() {
       <textarea
         name="message"
         placeholder="value"
-        rows="4"
+        rows={4}
         value={formData.message}
         onChange={handleChange}
         className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-400"
