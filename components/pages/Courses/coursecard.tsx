@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 
-export default function CourseCard({ price, title, desc, img, bg }) {
+export default function CourseCard({ price, title, desc, img, bg }:any) {
   return (
     <div className={` rounded-3xl p-6 relative custom-shadow bg-[#F9F9F9]`}>
       {/* Arrow / icon button */}
